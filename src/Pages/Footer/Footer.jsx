@@ -1,11 +1,11 @@
 import React from 'react';
-
+import logo from '../../assets/logo.svg'
 const Footer = () => {
     return (
         <footer className="footer p-10  bg-base-200 text-base-content">
         <div>
           <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" className="fill-current"></svg>
-          <img src="" alt="" />
+          <img src={logo} alt="" className='h-20 w-15 ms-10' />
           <p>Toy Summation Industries Ltd.</p>
         </div> 
         <div>

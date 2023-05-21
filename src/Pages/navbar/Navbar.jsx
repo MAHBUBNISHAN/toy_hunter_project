@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../image/logo.webp'
 
 
 const Navbar = () => {
@@ -7,10 +8,11 @@ const Navbar = () => {
         <div>
             
         <div className="navbar bg-neutral text-neutral-content flex justify-between ">
-            <div>
+            <div className='flex flex-col'>
 
-    <a className="btn btn-ghost normal-case text-xl bg-fuchsia-300 mx-2">Toy Summation</a>
-    <img src="" alt="" />
+    <a className="btn btn-ghost normal-case text-xl bg-green-400 mx-2">Toy Summation</a>
+    <img src={logo} alt="" className='h-10 w-20 m-2 rounded-md' />
+    
             </div>
 <div className='mx-3'>
     

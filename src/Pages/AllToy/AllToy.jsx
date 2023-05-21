@@ -20,9 +20,9 @@ const AllToy = () => {
     <thead>
       <tr className=' font-bold text-center'>
         <th className=' text-red-500'>Id</th>
-        <th className=' text-yellow-400'> Name</th>
-        <th className=' text-teal-600'>Job</th>
-        <th className=' text-emerald-600'>Favorite Color</th>
+        <th className=' text-yellow-400'> Category</th>
+        <th className=' text-teal-600'> Seller</th>
+        <th className=' text-emerald-600'>price</th>
       </tr>
     </thead>
     <tbody>

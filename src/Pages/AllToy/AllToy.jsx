@@ -22,7 +22,7 @@ const AllToy = () => {
         <th className=' text-red-500'>Id</th>
         <th className=' text-yellow-400'> Category</th>
         <th className=' text-teal-600'> Seller</th>
-        <th className=' text-emerald-600'>price</th>
+        <th className=' text-emerald-600'>Price</th>
       </tr>
     </thead>
     <tbody>

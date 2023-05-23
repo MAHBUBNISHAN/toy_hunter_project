@@ -10,7 +10,7 @@ const Toy = () => {
     },[])
     return (
         <div>
-            <h2> Our Product </h2>
+            <h2 className='text-2xl text-center underline text-red-300'> Our Product </h2>
             <div className='grid grid-cols-3 gap-5'>
             {
                 kits.map(kit=>

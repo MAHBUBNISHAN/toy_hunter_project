@@ -4,7 +4,7 @@ const AllToy = () => {
     const [toys,setToys]=useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/catagories')
+        fetch('http://localhost:5000/categories')
         .then(res=>res.json())
         .then(data =>setToys(data))
         .catch(error =>console.error(error))
@@ -30,7 +30,7 @@ const AllToy = () => {
     
       {/* row 3 */}
       <tr className=' text-center text-indigo-950'>
-        <th className=' text-purple-900'>{toy.id}</th>
+        <th className=' text-purple-900'>{toy._id}</th>
         <td className=' text-purple-900'>{toy.category}</td>
         <td className=' text-purple-900'>{toy.seller}</td>
         <td className=' text-purple-900'>{toy.price}</td>

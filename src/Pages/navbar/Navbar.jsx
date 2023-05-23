@@ -18,7 +18,7 @@ const Navbar = () => {
     
 <Link className="btn btn-ghost normal-case text-xl"  to="/">Home</Link>
 <Link className="btn btn-ghost normal-case text-xl"  to="/allToy">All Toy </Link>
-<Link className="btn btn-ghost normal-case text-xl"  to="/">My Toy </Link>
+<Link className="btn btn-ghost normal-case text-xl"  to="//bookings:id">Bookings </Link>
 <Link className="btn btn-ghost normal-case text-xl"  to="/">Add a Toy</Link>
 <Link className="btn btn-ghost normal-case text-xl" to="/login">Login</Link>
 <Link className="btn btn-ghost normal-case text-xl" to="/register">Register</Link>

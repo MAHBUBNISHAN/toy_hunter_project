@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Toy = () => {
     const [kits,setKits]=useState([]);
     useEffect( ()=>{
-        fetch('http://localhost:5000/toy')
+        fetch('http://localhost:5000/categories')
         .then(res=>res.json())
         .then(data =>setKits(data))
         .catch(error =>console.error(error))
     },[])
     return (
-        <div>
-            <h2 className='text-2xl text-center underline text-red-300'> Our Product </h2>
+        <div className='my-10'>
+            <h2 className='text-3xl text-center underline text-green-600'> Our Product </h2>
             <div className='grid grid-cols-3 gap-5'>
             {
                 kits.map(kit=>
@@ -18,6 +19,9 @@ const Toy = () => {
                         <div>
                         <img src={kit.img} alt=""  className='h-40 w-2/3 rounded-md ' />
                         <h3 className='text-xl my-2 font-bold text-red-400'>Type: {kit.category}</h3>
+                        <Link to={`/checkout/${kit._id}`}>
+                        <button className='btn btn-secondary'>Book Now</button>
+                        </Link>
                         </div>
                         <div className='my-auto'>
 

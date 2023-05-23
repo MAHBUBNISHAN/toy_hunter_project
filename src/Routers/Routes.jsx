@@ -7,6 +7,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Registation/Register";
 import Blog from "../Pages/Blog/Blog";
 import AllToy from "../Pages/AllToy/AllToy";
+import Bookings from "../Pages/Bookings/Bookings";
+import CheckOut from "../Pages/Checkout/CheckOut";
+import BookService from "../Pages/BookService/BookService";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +31,17 @@ const router = createBrowserRouter([
         {
           path:'/blog',
           element:<Blog></Blog>
+        },
+        {
+          path:'/bookings:id',
+          element:<Bookings></Bookings>,
+         
+        },
+      
+        {
+          path:'/checkout/:id',
+          element:<CheckOut></CheckOut>,
+          loader:({params})=> fetch(`http://localhost:5000/categories/${params.id}`)
         },
         {
          path:'/allToy',

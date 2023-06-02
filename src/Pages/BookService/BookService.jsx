@@ -4,7 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 const BookService = () => {
     const {user}=useContext(AuthContext);
     const [bookings,setBookings]=useState([])
-    const url=`http://localhost:5000/bookings?email=${user.email}`;
+    const url=`https://toy-server-site-xi.vercel.app/bookings?email=${user.email}`;
     useEffect(()=>{
         fetch(url)
         .then(res=>res.json())

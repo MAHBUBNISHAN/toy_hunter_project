@@ -10,6 +10,12 @@ import AllToy from "../Pages/AllToy/AllToy";
 import Bookings from "../Pages/Bookings/Bookings";
 import CheckOut from "../Pages/Checkout/CheckOut";
 import BookService from "../Pages/BookService/BookService";
+import RequireAuth from "../components/RequireAuth";
+import Test from "../Pages/Test/Test";
+import ToyDetails from "../Pages/ToyDetails/ToyDetails";
+import AddToy from "../Pages/AddToy/AddToy";
+import MyToys from "../Pages/MyToys/MyToys";
+import UpdateToy from "../Pages/UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
     {
@@ -33,19 +39,32 @@ const router = createBrowserRouter([
           element:<Blog></Blog>
         },
         {
-          path:'/bookings:id',
-          element:<Bookings></Bookings>,
+          path:'/mytoys',
+          element:<RequireAuth><MyToys/></RequireAuth>,
+         
+        },
+        {
+          path:'/toy/update/:id',
+          element:<RequireAuth><UpdateToy/></RequireAuth>,
          
         },
       
         {
           path:'/checkout/:id',
           element:<CheckOut></CheckOut>,
-          loader:({params})=> fetch(`http://localhost:5000/categories/${params.id}`)
+          loader:({params})=> fetch(`https://toy-server-site-xi.vercel.app/categories/${params.id}`)
         },
         {
          path:'/allToy',
-         element:<AllToy></AllToy>
+         element:<AllToy/>
+        },
+        {
+         path:'/add',
+         element:<RequireAuth><AddToy/></RequireAuth>
+        },
+        {
+          path:'/toy/:id',
+          element:<RequireAuth><ToyDetails/></RequireAuth>
         }
       ]
     },
